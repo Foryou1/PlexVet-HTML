@@ -1,0 +1,48 @@
+.biz-num-input-biz-num-input {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+ 
+.biz-num-input-container {
+  display: flex;
+  position: relative;
+}
+ 
+.biz-num-input-text-input {
+  fill: var(--dl-color-success-500);
+  color: var(--dl-color-success-500);
+  width: 50px;
+  display: block;
+  border-color: var(--dl-color-primary-100);
+  background-color: var(--dl-color-gray-white);
+}
+ 
+.biz-num-input-bar1 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+ 
+.biz-num-input-bar2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+ 
+.biz-num-input-fragment1 {
+  display: contents;
+}
+ 
+.biz-num-input-text3 {
+  display: inline-block;
+}
+ 
+.biz-num-input-fragment2 {
+  display: contents;
+}
+ 
+.biz-num-input-text4 {
+  display: inline-block;
+}

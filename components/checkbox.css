@@ -1,0 +1,6 @@
+.checkbox-checkbox1 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}

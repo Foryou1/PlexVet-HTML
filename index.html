@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>PlexVET</title>
+    <meta name="description" content="Description of the website" />
+    <meta property="og:title" content="PlexVET" />
+    <meta property="og:description" content="Description of the website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: "Noto Sans";
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.4;
+        color: var(--dl-color-gray-black);
+        background: var(--dl-color-gray-white);
+
+        fill: var(--dl-color-gray-black);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;600;700;800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+    <style>
+      :root {
+        --main-color: #B959A1;
+      }
+
+      input[type="checkbox"] {
+        accent-color: var(--main-color);
+      }
+
+      input[type="radio"] {
+        accent-color: var(--main-color);
+      }
+
+      input::placeholder {
+        text-align: left;
+      }
+
+      /* 브라우저 호환성을 위해 아래와 같이 벤더 프리픽스도 추가할 수 있습니다. */
+      input::-webkit-input-placeholder {
+        /* Chrome, Safari, Opera */
+        text-align: left;
+      }
+
+      input::-moz-placeholder {
+        /* Firefox 19+ */
+        text-align: left;
+      }
+
+      input:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        text-align: left;
+      }
+
+      input:-moz-placeholder {
+        /* Firefox 18- */
+        text-align: left;
+      }
+    </style>
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container10">
+        <code-embed-wrapper
+          class="code-embed-wrapper"
+          rootclassname="code-embedundefined"
+        >
+          <!--CodeEmbed component-->
+          <div class="code-embed-container1 code-embedroot-class-name">
+            <div>
+              <div class="code-embed-container3">
+                <style>
+                  :root {
+                    --main-color: #B959A1;
+                  }
+
+                  input[type='checkbox'] {
+                    accent-color: var(--main-color);
+                  }
+                  input[type='radio'] {
+                    accent-color: var(--main-color);
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </code-embed-wrapper>
+        <navbar-wrapper class="navbar-wrapper" rootclassname="navbarundefined">
+          <!--Navbar component-->
+          <header class="navbar-navbar navbarroot-class-name1">
+            <div class="navbar-desktop">
+              <div class="navbar-main">
+                <div class="navbar-branding">
+                  <a href="index.html" class="navbar-navlink1">
+                    <img
+                      alt="pastedImage"
+                      src="public/img/logo-200h.png"
+                      class="navbar-finbest"
+                    />
+                  </a>
+                </div>
+                <div class="navbar-links1">
+                  <a href="index.html" class="link"><span>Home</span></a>
+                  <a href="index.html" class="link">
+                    <span>How it works</span>
+                  </a>
+                  <a href="index.html" class="link"><span>Prices</span></a>
+                  <a href="index.html" class="link"><span>Contact</span></a>
+                </div>
+              </div>
+              <div class="navbar-quick-actions">
+                <a href="index.html" class="link navbar-log-in">Log in</a>
+                <a href="index.html" class="navbar-navlink2">
+                  <div class="navbar-sign-up-btn">
+                    <span class="navbar-sign-up">Sign up</span>
+                  </div>
+                </a>
+                <img
+                  id="open-mobile-menu"
+                  alt="pastedImage"
+                  src="public/pastedimage-8o98.svg"
+                  class="navbar-hamburger-menu"
+                />
+              </div>
+            </div>
+            <div id="mobile-menu" class="navbar-mobile">
+              <div class="navbar-top">
+                <img
+                  alt="image"
+                  src="public/pastedimage-cx4wqj.svg"
+                  class="navbar-image"
+                />
+                <svg
+                  id="close-mobile-menu"
+                  viewBox="0 0 1024 1024"
+                  class="navbar-icon1"
+                >
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="navbar-links2">
+                <a href="index.html" class="navbar-navlink3">
+                  <span>Features</span>
+                </a>
+                <a href="index.html" class="navbar-navlink4">
+                  <span>How it works</span>
+                </a>
+                <a href="index.html" class="navbar-navlink5">
+                  <span>Prices</span>
+                </a>
+                <a href="index.html" class="navbar-navlink6">
+                  <span>Contact</span>
+                </a>
+                <div class="navbar-buttons">
+                  <a href="index.html" class="navbar-navlink7">
+                    <div class="navbar-btn1">
+                      <span class="navbar-text1"><span>Log in</span></span>
+                    </div>
+                  </a>
+                  <a href="index.html" class="navbar-navlink8">
+                    <div class="navbar-btn2">
+                      <span class="navbar-text2"><span>Sign up</span></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="navbar-container2">
+                <script defer="">
+                  /*
+                  Mobile menu - Code Embed
+                  */
+
+                  // Mobile menu
+                  const mobileMenu = document.querySelector('#mobile-menu');
+
+                  // Buttons
+                  const closeButton = document.querySelector('#close-mobile-menu');
+                  const openButton = document.querySelector('#open-mobile-menu');
+
+                  if (mobileMenu && closeButton && openButton) {
+                    // On openButton click, set the mobileMenu position left to -100vw
+                    openButton.addEventListener('click', function () {
+                      mobileMenu.style.transform = 'translateX(0%)';
+                    });
+
+                    // On closeButton click, set the mobileMenu position to 0vw
+                    closeButton.addEventListener('click', function () {
+                      mobileMenu.style.transform = 'translateX(100%)';
+                    });
+                  }
+                </script>
+              </div>
+            </div>
+          </header>
+        </navbar-wrapper>
+        <div class="home-hero">
+          <div class="home-content10">
+            <div class="home-container11"></div>
+            <div class="home-container12">
+              <div class="home-content11">
+                <img
+                  alt="image"
+                  src="public/img/logo-200h.png"
+                  class="home-image1"
+                />
+                <h1 class="home-title1">반려동물 유전자 분석 전문서비스</h1>
+                <h1 class="home-title2">온라인 지원 센터</h1>
+                <span class="home-caption1">
+                  정확한 유전자 분석으로 반려동물 진료에 대한 정확성을
+                  높입니다.&nbsp;
+                </span>
+                <div class="home-hero-buttons1">
+                  <div class="home-request-btn">
+                    <span class="home-caption2">유전자 검사신청</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-images">
+                <div class="home-column1">
+                  <img
+                    alt="pastedImage"
+                    src="https://images.unsplash.com/photo-1611764461465-09162da6465a?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDYxfHxtZWRpY2FsfGVufDB8fHx8MTc0MTQxNzM4Mnww&amp;ixlib=rb-4.0.3&amp;h=900"
+                    class="home-pasted-image1"
+                  />
+                </div>
+                <div class="home-column2">
+                  <img
+                    alt="pastedImage"
+                    src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHxkb2d8ZW58MHx8fHwxNzQxMzMxNTkwfDA&amp;ixlib=rb-4.0.3&amp;h=600"
+                    class="home-pasted-image2"
+                  />
+                </div>
+                <div class="home-column3">
+                  <img
+                    alt="pastedImage"
+                    src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fGNhdHxlbnwwfHx8fDE3NDE0MTcyNTJ8MA&amp;ixlib=rb-4.0.3&amp;h=900"
+                    class="home-pasted-image3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-container13">
+          <div class="home-header1">
+            <div class="home-container14">
+              <div class="home-container15">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  class="home-icon10"
+                >
+                  <path
+                    d="M5 22q0-3.475 1.45-5.637t4-4.363q-2.55-2.2-4-4.362T5 2v-.25q0-.425.288-.712T6 .75t.713.288T7 1.75V2q0 .275.013.513T7.05 3h9.9q.025-.25.038-.488T17 2v-.25q0-.425.288-.712T18 .75t.713.288t.287.712V2q0 3.475-1.45 5.638t-4 4.362q2.55 2.2 4 4.363T19 22v.25q0 .425-.288.713T18 23.25t-.712-.288T17 22.25V22q0-.275-.012-.513T16.95 21h-9.9q-.025.25-.037.488T7 22v.25q0 .425-.288.713T6 23.25t-.712-.288T5 22.25zM8.45 7h7.1q.325-.475.563-.95T16.55 5h-9.1q.2.55.437 1.038T8.45 7M12 10.7q.5-.425.975-.85t.9-.85h-3.75q.425.425.9.85t.975.85M10.125 15h3.75q-.425-.425-.9-.85T12 13.3q-.5.425-.975.85t-.9.85M7.45 19h9.1q-.2-.55-.437-1.037T15.55 17h-7.1q-.325.475-.562.95T7.45 19"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <h2 class="home-text10">
+                  간단하고 신속한 유전자 검사 프로세스
+                </h2>
+              </div>
+              <div class="home-heading1"></div>
+            </div>
+          </div>
+          <div class="home-layout349 thq-section-padding">
+            <div class="home-max-width1 thq-section-max-width">
+              <div class="home-container16 thq-grid-auto-300">
+                <div class="home-card1 thq-card thq-flex-column">
+                  <div class="home-container17">
+                    <h2 class="home-text11 thq-heading-2">검체 의뢰 및 수거</h2>
+                  </div>
+                  <div class="home-container18">
+                    <span class="home-text12 thq-body-small">
+                      의뢰 즉시, 전문팀이 병원을 방문하여 검체를 수거합니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="home-card2 thq-card thq-flex-column">
+                  <div class="home-container19">
+                    <h2 class="home-text13 thq-heading-2">
+                      최첨단 유전자 분석
+                    </h2>
+                  </div>
+                  <div class="home-container20">
+                    <span class="home-text14 thq-body-small">
+                      최신 분석 장비와 엄격한 품질관리를 통해 정확한 결과를
+                      보장합니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="home-card3 thq-card thq-flex-column">
+                  <div class="home-container21">
+                    <h2 class="home-text15 thq-heading-2">온라인 결과 통보</h2>
+                  </div>
+                  <div class="home-container22">
+                    <span class="home-text16 thq-body-small">
+                      검사 완료 후, 빠르고 간편하게 온라인으로 결과를
+                      전달합니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="home-card4 thq-card thq-flex-column">
+                  <h2 class="home-text17 thq-heading-2">
+                    2. 최첨단 유전자 분석
+                  </h2>
+                  <span class="home-text18 thq-body-small">
+                    최신 분석 장비와 엄격한 품질관리를 통해 정확한 결과를
+                    보장합니다.
+                  </span>
+                </div>
+                <div class="home-card5 thq-card thq-flex-column">
+                  <h1 class="home-text19 thq-heading-2">3. 온라인 결과 통보</h1>
+                  <span class="home-text20 thq-body-small">
+                    검사 완료 후, 빠르고 간편하게 온라인으로 결과를 전달합니다.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-stats">
+            <div class="home-stat1">
+              <div class="home-container23">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="home-icon12"
+                >
+                  <g fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path
+                      d="M6.4 8a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 1 .6-.6h8.8a.6.6 0 0 1 .6.6v3.8a.6.6 0 0 0 .6.6h1.8a.6.6 0 0 1 .6.6v11.8a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6z"
+                    ></path>
+                    <path
+                      d="M9.992 8h2m2 0h-2m0 0V6m0 2v2M16 17.01l.01-.011M16 13.01l.01-.011M12 13.01l.01-.011M8 13.01l.01-.011M8 17.01l.01-.011m3.99.011l.01-.011"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <span class="home-description1">
+                동물병원에서 신뢰하고 신청 가능한 서비스
+              </span>
+            </div>
+            <div class="home-stat2">
+              <div class="home-container24">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="home-icon16"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M5.75 9.415H4.568c-.98 0-1.775.794-1.775 1.775v8.284c0 .98.795 1.776 1.775 1.776h1.184c.98 0 1.775-.795 1.775-1.776V11.19c0-.98-.795-1.775-1.775-1.775"
+                    ></path>
+                    <path
+                      d="m21.16 12.243l-1.42 7.101a2.37 2.37 0 0 1-2.367 1.906h-7.48a2.367 2.367 0 0 1-2.367-2.367v-7.101A3.23 3.23 0 0 1 8.71 9.415l.982-5.918a.888.888 0 0 1 1.278-.65l1.1.544a3.55 3.55 0 0 1 1.87 4.047l-.496 1.965h5.396a2.367 2.367 0 0 1 2.32 2.84"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <span class="home-description2">
+                최신 분석기술과 엄격한 품질관리로 높은 정확성 보장
+              </span>
+            </div>
+            <div class="home-stat3">
+              <div class="home-container25">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="home-icon20"
+                >
+                  <path
+                    d="M19.291 6h.71a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2l-4.17-5.836a2 2 0 0 0-2.201-.753l-2.486.746a2 2 0 0 1-1.988-.502l-.293-.293a1 1 0 0 1 .152-1.539l5.401-3.6a2 2 0 0 1 2.183-.024l4.156 2.645A1 1 0 0 0 19.29 6M5.027 14.295l-1.616 1.414a1 1 0 0 0 .041 1.538l5.14 4.04a1 1 0 0 0 1.487-.29l.704-1.232a2 2 0 0 0-.257-2.338l-2.702-2.972a2 2 0 0 0-2.797-.16M7.046 5H3a1 1 0 0 0-1 1v7.516a2 2 0 0 0 .35 1.13l.074-.066l1.615-1.414a3.5 3.5 0 0 1 4.895.28l2.702 2.972a3.5 3.5 0 0 1 .45 4.09l-.655 1.146a2 2 0 0 0 1.738-.155l4.41-2.646a1 1 0 0 0 .299-1.438l-5.267-7.379a.5.5 0 0 0-.55-.188l-2.486.745a3.5 3.5 0 0 1-3.48-.877l-.293-.293a2.5 2.5 0 0 1 .38-3.848z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <span class="home-description3">
+                수의학 전문가의 검증을 거친 신뢰할 수 있는 정보 제공
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="home-sections">
+          <div class="home-section">
+            <div class="home-container26">
+              <h2 class="home-text21">
+                <span>PlexVET</span>
+                <span class="home-text23">유전자 검사</span>
+                <span>서비스 안내</span>
+              </h2>
+              <div class="home-content12">
+                <div class="home-highlight1">
+                  <svg
+                    width="36"
+                    height="36"
+                    view-box="0 0 36 36"
+                    class="home-icon22"
+                  >
+                    <path
+                      d="M30 18A12 12 0 1 1 18 6a12 12 0 0 1 12 12m-4.77-2.16a1.4 1.4 0 0 0-2-2l-6.77 6.77L13 17.16a1.4 1.4 0 0 0-2 2l5.45 5.45Z"
+                      fill="currentColor"
+                      class="clr-i-solid clr-i-solid-path-1"
+                    ></path>
+                    <path d="M0 0h36v36H0z" fill="none"></path>
+                  </svg>
+                  <span class="home-text25">
+                    개(Canine), 고양이(Feline) 감염병 전문 검사
+                  </span>
+                </div>
+                <div class="home-highlight2">
+                  <svg
+                    width="36"
+                    height="36"
+                    view-box="0 0 36 36"
+                    class="home-icon25"
+                  >
+                    <path
+                      d="M30 18A12 12 0 1 1 18 6a12 12 0 0 1 12 12m-4.77-2.16a1.4 1.4 0 0 0-2-2l-6.77 6.77L13 17.16a1.4 1.4 0 0 0-2 2l5.45 5.45Z"
+                      fill="currentColor"
+                      class="clr-i-solid clr-i-solid-path-1"
+                    ></path>
+                    <path d="M0 0h36v36H0z" fill="none"></path>
+                  </svg>
+                  <span class="home-text26">
+                    질병 검사의 양섬/음성 반응 결과 확인
+                  </span>
+                </div>
+                <div class="home-highlight3">
+                  <svg
+                    width="36"
+                    height="36"
+                    view-box="0 0 36 36"
+                    class="home-icon28"
+                  >
+                    <path
+                      d="M30 18A12 12 0 1 1 18 6a12 12 0 0 1 12 12m-4.77-2.16a1.4 1.4 0 0 0-2-2l-6.77 6.77L13 17.16a1.4 1.4 0 0 0-2 2l5.45 5.45Z"
+                      fill="currentColor"
+                      class="clr-i-solid clr-i-solid-path-1"
+                    ></path>
+                    <path d="M0 0h36v36H0z" fill="none"></path>
+                  </svg>
+                  <span class="home-text27">
+                    검사 결과를 Class 점수에 따라 추가 정보 확인
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-container27">
+              <div class="home-header2">
+                <div class="home-heading2">
+                  <h2 class="home-text28">PlexVET 검사항목</h2>
+                </div>
+              </div>
+              <div class="home-feature-list">
+                <div class="home-container28">
+                  <div class="home-feature1">
+                    <img
+                      alt="image"
+                      src="public/vector6113-r6dl.svg"
+                      class="home-image2"
+                    />
+                    <div class="home-content13">
+                      <span class="home-title3">Gastrointestinal Tract</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-container29">
+                  <div class="home-feature2">
+                    <img
+                      alt="image"
+                      src="public/vector6113-r6dl.svg"
+                      class="home-image3"
+                    />
+                    <div class="home-content14">
+                      <span class="home-title4">Neuorology Pathogens</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-container30">
+                  <div class="home-feature3">
+                    <img
+                      alt="image"
+                      src="public/vector6113-r6dl.svg"
+                      class="home-image4"
+                    />
+                    <div class="home-content15">
+                      <span class="home-title5">Respiratory Pathogens</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-container31">
+                  <div class="home-feature4">
+                    <img
+                      alt="image"
+                      src="public/vector6113-r6dl.svg"
+                      class="home-image5"
+                    />
+                    <div class="home-content16">
+                      <span class="home-title6">Anemia Pathogens</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="home-container32">
+                  <div class="home-feature5">
+                    <img
+                      alt="image"
+                      src="public/vector6113-r6dl.svg"
+                      class="home-image6"
+                    />
+                    <div class="home-content17">
+                      <span class="home-title7">Tick-Borne Pathogens</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-image7"></div>
+        </div>
+        <div class="home-contact-qna thq-section-padding">
+          <div class="home-max-width2 thq-flex-row thq-section-max-width">
+            <div class="home-content18 thq-flex-column">
+              <div class="home-container33">
+                <svg
+                  width="60"
+                  height="60"
+                  viewBox="0 0 24 24"
+                  class="home-icon31"
+                >
+                  <path
+                    d="m15.95 22l-4.25-4.25l1.4-1.4l2.85 2.85l5.65-5.65l1.4 1.4zM12 11l8-5H4zm0 2L4 8v10h5.15l2 2H4q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v4.35l-2 2V8zm0 0"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <div class="home-section-title1 thq-card">
+                  <div class="home-content19">
+                    <h2 class="home-text29 thq-heading-2">문의하기</h2>
+                  </div>
+                </div>
+              </div>
+              <form class="home-form thq-card">
+                <div class="home-input1">
+                  <label
+                    for="contact-form-4-name"
+                    class="home-text30 thq-body-small"
+                  >
+                    병원명 또는 성함
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-form-4-name"
+                    placeholder="Name "
+                    class="home-text-input1 thq-input"
+                  />
+                </div>
+                <div class="home-input2">
+                  <label
+                    for="contact-form-4-email"
+                    class="home-text31 thq-body-small"
+                  >
+                    이메일 또는 전화번호
+                  </label>
+                  <input
+                    type="email"
+                    id="contact-form-4-email"
+                    required="true"
+                    placeholder="Email or Number"
+                    class="home-text-input2 thq-input"
+                  />
+                </div>
+                <div class="home-container34">
+                  <label
+                    for="contact-form-4-message"
+                    class="home-text32 thq-body-small"
+                  >
+                    내용
+                  </label>
+                  <textarea
+                    id="contact-form-4-message"
+                    rows="3"
+                    placeholder="Enter your message"
+                    class="home-textarea thq-input"
+                  ></textarea>
+                </div>
+                <div class="home-checkbox1">
+                  <input
+                    type="checkbox"
+                    id="contact-form-4-check"
+                    checked="true"
+                    required="true"
+                    class="thq-checkbox"
+                  />
+                  <label
+                    for="contact-form-4-check"
+                    class="home-text33 thq-body-small"
+                  >
+                    내용을 확인 했습니다.
+                  </label>
+                </div>
+                <button type="submit" class="home-button thq-button-filled">
+                  <span class="home-action1 thq-body-small">문의</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="home-contact-map thq-section-padding">
+          <div class="home-max-width3 thq-section-max-width">
+            <div class="home-container35">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                class="home-icon33"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle r="3" cx="12" cy="10"></circle>
+                  <path
+                    d="M12 2a8 8 0 0 0-8 8c0 1.892.402 3.13 1.5 4.5L12 22l6.5-7.5c1.098-1.37 1.5-2.608 1.5-4.5a8 8 0 0 0-8-8"
+                  ></path>
+                </g>
+              </svg>
+              <div class="home-section-title2">
+                <div class="home-content20">
+                  <h2 class="home-text34 thq-heading-2">오시는 길</h2>
+                </div>
+              </div>
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12638.749833506532!2d127.1100663557001!3d37.63303894557973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z6rK96riw64-EIOq1rOumrOyLnCDqsIjrp6TspJHslZnroZwgMTkwIEQtMzA1Ne2YuA!5e0!3m2!1sko!2skr!4v1741454078108!5m2!1sko!2skr"
+              title="Map"
+              class="home-iframe thq-img-ratio-16-9"
+            ></iframe>
+            <div class="home-row">
+              <div class="home-content21">
+                <div class="home-container36">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="home-icon37"
+                  >
+                    <path
+                      d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17m9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5m1.5-6H6V6h12z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="home-contact-info1">
+                  <div class="home-content22">
+                    <h3 class="home-text35 thq-heading-3">버스 이용 시</h3>
+                    <p class="home-text36 thq-body-large">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in ero.
+                    </p>
+                  </div>
+                  <span class="home-email thq-body-small">
+                    hello@teleporthq.io
+                  </span>
+                </div>
+              </div>
+              <div class="home-content23">
+                <div class="home-container37">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    class="home-icon39"
+                  >
+                    <path
+                      d="M8.5 5a.5.5 0 0 0 0 1h3a.5.5 0 1 0 0-1zM3 6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v8a3 3 0 0 1-2.681 2.983l2.384 1.06a.5.5 0 1 1-.406.914L11.894 17H8.106l-4.403 1.957a.5.5 0 1 1-.406-.914l2.385-1.06A3 3 0 0 1 3 14zm1 0v5h12V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2m4 8a1 1 0 1 0-2 0a1 1 0 0 0 2 0m5 1a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="home-contact-info2">
+                  <div class="home-content24">
+                    <h3 class="home-text37 thq-heading-3">지하철 이용 시</h3>
+                    <p class="home-text38 thq-body-large">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in ero.
+                    </p>
+                  </div>
+                  <span class="home-phone thq-body-small">
+                    +1 (555) 000-0000
+                  </span>
+                </div>
+              </div>
+              <div class="home-content25">
+                <div class="home-container38">
+                  <svg viewBox="0 0 1024 1024" class="thq-icon-medium">
+                    <path
+                      d="M512 0c-176.732 0-320 143.268-320 320 0 320 320 704 320 704s320-384 320-704c0-176.732-143.27-320-320-320zM512 512c-106.040 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="home-contact-info3">
+                  <div class="home-content26">
+                    <h3 class="home-text39 thq-heading-3">주소</h3>
+                    <p class="home-text40 thq-body-large">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in ero.
+                    </p>
+                  </div>
+                  <span class="home-address thq-body-small">
+                    456 Test Ave, Bucharest
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-heading3"></div>
+        <div class="home-get-started">
+          <div class="home-content27">
+            <div class="home-heading4">
+              <h2 class="home-text41">
+                PlexVET 은 빠르고 안전한 유전자 검사 시스템 입니다.
+              </h2>
+            </div>
+            <div class="home-hero-buttons2">
+              <div class="home-join-btn">
+                <span class="home-caption3">회원가입</span>
+              </div>
+              <div class="home-guide-btn">
+                <span class="home-caption4">검사방식</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer-wrapper class="footer-wrapper" rootclassname="footerundefined">
+          <!--Footer component-->
+          <div class="footer-footer footerroot-class-name">
+            <div class="footer-content">
+              <div class="footer-information">
+                <div class="footer-heading">
+                  <img
+                    alt="pastedImage"
+                    src="public/img/logo-200h.png"
+                    class="footer-pasted-image"
+                  />
+                  <span class="footer-text10">
+                    <fragment class="home-fragment20">
+                      <span class="home-text55">
+                        플렉스벳 반려동물 검사센터
+                      </span>
+                    </fragment>
+                  </span>
+                </div>
+              </div>
+              <div class="footer-links">
+                <div class="footer-column1">
+                  <span class="footer-header1">
+                    <fragment class="home-fragment21">
+                      <span class="home-text56">회사 정보</span>
+                    </fragment>
+                  </span>
+                  <span class="footer-link10">
+                    <fragment class="home-fragment10">
+                      <span class="home-text42">리얼티바이오</span>
+                    </fragment>
+                  </span>
+                  <span class="footer-link11">
+                    <fragment class="home-fragment12">
+                      <span class="home-link">
+                        <span>주소 : 경기도 구리시 갈매중앙로</span>
+                        <br />
+                        <span>190 D-3055호</span>
+                        <br />
+                      </span>
+                    </fragment>
+                  </span>
+                  <span class="footer-link12">
+                    <fragment class="home-fragment13">
+                      <span class="home-text48">대표자: 최혜경</span>
+                    </fragment>
+                  </span>
+                  <span class="footer-link13">
+                    <fragment class="home-fragment14">
+                      <span class="home-text49">사업자번호 : 000-00-00000</span>
+                    </fragment>
+                  </span>
+                  <span class="footer-link14">
+                    <fragment class="home-fragment15">
+                      <span class="home-text50">
+                        통신판매등록번호 : 000-00-00000
+                      </span>
+                    </fragment>
+                  </span>
+                </div>
+                <div class="footer-container">
+                  <div class="footer-column2">
+                    <span class="footer-header2">
+                      <fragment class="home-fragment22">
+                        <span class="home-text57">고객 센터</span>
+                      </fragment>
+                    </span>
+                    <span class="footer-link15">
+                      <fragment class="home-fragment16">
+                        <span class="home-text51">
+                          운영시간 : 오전 10시 - 오후 5시
+                        </span>
+                      </fragment>
+                    </span>
+                    <span class="footer-link16">
+                      <fragment class="home-fragment17">
+                        <span class="home-text52">전화번호 :031-522-5009</span>
+                      </fragment>
+                    </span>
+                    <span class="footer-link17">
+                      <fragment class="home-fragment18">
+                        <span class="home-text53">FAX : 031-522-6896</span>
+                      </fragment>
+                    </span>
+                    <span class="footer-link18">
+                      <fragment class="home-fragment19">
+                        <span class="home-text54">
+                          e.mail : chk@realtbio.com
+                        </span>
+                      </fragment>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="footer-text11">
+              <fragment class="home-fragment11">
+                <span class="home-text43">
+                  © 2025 주식회사 리얼티바이오. All Rights Reserved.
+                </span>
+              </fragment>
+            </span>
+          </div>
+        </footer-wrapper>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>

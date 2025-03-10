@@ -1,0 +1,37 @@
+.data-cell-data-cell {
+  flex: 0 0 auto;
+  display: flex;
+  padding: var(--dl-space-space-halfunit);
+  position: relative;
+  align-items: center;
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+  border-width: 1px;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  grid-column-start: 1;
+  border-right-width: 0px;
+  border-bottom-width: 0.1rem;
+}
+ 
+.data-cell-text1 {
+  text-align: center;
+  word-break: keep-all;
+  white-space: nowrap;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-column-end: 3;
+  grid-column-start: 2;
+}
+ 
+.data-cell-fragment {
+  display: contents;
+}
+ 
+.data-cell-text2 {
+  display: inline-block;
+}

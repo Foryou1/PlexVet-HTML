@@ -1,0 +1,105 @@
+.input-label-wrapper {
+  display: contents;
+}
+ 
+.input-label-container {
+  display: flex;
+  position: relative;
+}
+ 
+
+
+.input-radio-item-wrapper {
+  display: contents;
+}
+ 
+.input-radio-item-input-radio-item {
+  gap: var(--dl-space-space-halfunit);
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+ 
+.input-radio-item-input-radio {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  border-color: var(--dl-color-primary-100);
+  border-width: 2px;
+}
+ 
+.input-radio-fragment1 {
+  display: contents;
+}
+ 
+.input-radio-text1 {
+  display: inline-block;
+}
+
+.input-radio-item-wrapper-7zu2 {
+  display: contents;
+}
+ 
+.input-radio-item-input-radio-item1 {
+  gap: var(--dl-space-space-halfunit);
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-halfunit);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-halfunit);
+  justify-content: flex-start;
+}
+ 
+.input-radio-item-input-radio1 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  border-color: var(--dl-color-primary-100);
+  border-width: 2px;
+}
+ 
+.input-radio-fragment2 {
+  display: contents;
+}
+ 
+.input-radio-text2 {
+  display: inline-block;
+}
+
+.input-radio-input-radio {
+  gap: var(--dl-space-space-smallunit);
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+}
+ 
+.input-radio-radio-group {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+ 
+.input-radio-fragment1 {
+  display: contents;
+}
+ 
+.input-radio-text1 {
+  display: inline-block;
+}
+ 
+.input-radio-fragment2 {
+  display: contents;
+}
+ 
+.input-radio-text2 {
+  display: inline-block;
+}

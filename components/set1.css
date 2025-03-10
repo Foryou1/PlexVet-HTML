@@ -1,0 +1,48 @@
+.set1-set1 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.set1-title-bar {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+ 
+.set1-text1 {
+  fill: var(--dl-color-primary-100);
+  color: var(--dl-color-primary-100);
+}
+ 
+.set1-checkbox-row1 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+ 
+.set1-checkbox-row2 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+ 
+.set1-checkbox-row3 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+ 
+.set1-checkbox-row4 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  position: relative;
+  align-items: center;
+}

@@ -1,0 +1,61 @@
+.input-text-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-color: var(--dl-color-gray-500);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-inputradius);
+  background-color: var(--dl-color-gray-white);
+}
+ 
+.input-text-text-input {
+  fill: var(--dl-color-gray-black);
+  color: var(--dl-color-gray-black);
+  width: 100%;
+  outline: none;
+  text-align: left;
+  border-color: var(--dl-color-gray-500);
+  border-width: 0px;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+

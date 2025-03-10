@@ -1,0 +1,18 @@
+.text-area-text-area {
+  display: flex;
+  position: relative;
+  border-color: var(--dl-color-gray-500);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-inputradius);
+  flex-direction: column;
+  background-color: var(--dl-color-gray-white);
+}
+ 
+.text-area-textarea {
+  height: 129px;
+  resize: none;
+  border-width: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+}

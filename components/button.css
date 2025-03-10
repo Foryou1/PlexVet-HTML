@@ -1,0 +1,20 @@
+.button-container {
+  display: flex;
+  position: relative;
+}
+ 
+.button-button {
+  fill: var(--dl-color-gray-white);
+  color: var(--dl-color-gray-white);
+  width: auto;
+  border-color: var(--dl-color-primary-100);
+  background-color: var(--dl-color-primary-100);
+}
+ 
+.button-fragment {
+  display: contents;
+}
+ 
+.button-text2 {
+  display: inline-block;
+}

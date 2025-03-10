@@ -1,0 +1,250 @@
+.input-label-wrapper {
+  display: contents;
+}
+ 
+.input-label-container {
+  display: flex;
+  position: relative;
+}
+ 
+
+
+.input-text-wrapper {
+  display: contents;
+}
+ 
+.input-text-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-color: var(--dl-color-gray-500);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-inputradius);
+  background-color: var(--dl-color-gray-white);
+}
+ 
+.input-text-text-input {
+  fill: var(--dl-color-gray-black);
+  color: var(--dl-color-gray-black);
+  width: 100%;
+  outline: none;
+  text-align: left;
+  border-color: var(--dl-color-gray-500);
+  border-width: 0px;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+.input-text-wrapper-9d45 {
+  display: contents;
+}
+ 
+.input-text-container1 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-color: var(--dl-color-gray-500);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-inputradius);
+  background-color: var(--dl-color-gray-white);
+}
+ 
+.input-text-text-input1 {
+  fill: var(--dl-color-gray-black);
+  color: var(--dl-color-gray-black);
+  width: 100%;
+  outline: none;
+  text-align: left;
+  border-color: var(--dl-color-gray-500);
+  border-width: 0px;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+.input-text-wrapper-ozr1 {
+  display: contents;
+}
+ 
+.input-text-container2 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-color: var(--dl-color-gray-500);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-inputradius);
+  background-color: var(--dl-color-gray-white);
+}
+ 
+.input-text-text-input2 {
+  fill: var(--dl-color-gray-black);
+  color: var(--dl-color-gray-black);
+  width: 100%;
+  outline: none;
+  text-align: left;
+  border-color: var(--dl-color-gray-500);
+  border-width: 0px;
+}
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+.input-phone-input-phone {
+  gap: var(--dl-space-space-smallunit);
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+}
+ 
+.input-phone-phone-row {
+  gap: var(--dl-space-space-smallunit);
+  display: flex;
+  flex-direction: row;
+}
+ 
+.input-phone-container1 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+ 
+.input-phone-container2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+ 
+.input-phone-fragment1 {
+  display: contents;
+}
+ 
+.input-phone-text3 {
+  display: inline-block;
+}
+ 
+.input-phone-fragment2 {
+  display: contents;
+}
+ 
+.input-phone-text4 {
+  display: inline-block;
+}

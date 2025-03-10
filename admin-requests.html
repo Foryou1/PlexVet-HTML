@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>AdminRequests - PlexVET</title>
+    <meta name="description" content="Description of the website" />
+    <meta property="og:title" content="AdminRequests - PlexVET" />
+    <meta property="og:description" content="Description of the website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: "Noto Sans";
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.4;
+        color: var(--dl-color-gray-black);
+        background: var(--dl-color-gray-white);
+
+        fill: var(--dl-color-gray-black);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;600;700;800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+    <style>
+      :root {
+        --main-color: #B959A1;
+      }
+
+      input[type="checkbox"] {
+        accent-color: var(--main-color);
+      }
+
+      input[type="radio"] {
+        accent-color: var(--main-color);
+      }
+
+      input::placeholder {
+        text-align: left;
+      }
+
+      /* 브라우저 호환성을 위해 아래와 같이 벤더 프리픽스도 추가할 수 있습니다. */
+      input::-webkit-input-placeholder {
+        /* Chrome, Safari, Opera */
+        text-align: left;
+      }
+
+      input::-moz-placeholder {
+        /* Firefox 19+ */
+        text-align: left;
+      }
+
+      input:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        text-align: left;
+      }
+
+      input:-moz-placeholder {
+        /* Firefox 18- */
+        text-align: left;
+      }
+    </style>
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./admin-requests.css" rel="stylesheet" />
+
+      <div class="admin-requests-container1">
+        <div class="admin-requests-title-bar">
+          <h2 class="admin-requests-heading7 subTitle">검사의뢰 목록</h2>
+        </div>
+        <div class="admin-requests-root">
+          <div class="admin-requests-sidebar">
+            <ul class="admin-requests-ul list">
+              <li class="admin-requests-li list-item">
+                <a
+                  href="https://example.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="contentLg"
+                >
+                  검사의뢰 목록
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="admin-requests-main">
+            <div class="admin-requests-search-section">
+              <div class="admin-requests-container2">
+                <div class="admin-requests-container3">
+                  <div class="admin-requests-search-bar">
+                    <select class="admin-requests-select">
+                      <option value="병원명">병원명</option>
+                      <option value="수의사명">수의사명</option>
+                      <option value="환자명">환자명</option>
+                    </select>
+                    <div class="admin-requests-container4">
+                      <input
+                        type="text"
+                        id="contact-form-3-name"
+                        value=""
+                        placeholder=""
+                        class="admin-requests-text-input Content thq-input"
+                      />
+                      <div class="admin-requests-icon1">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <path
+                            d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="admin-requests-search-btn">
+                      <button class="admin-requests-button thq-button-outline">
+                        <span class="thq-body-small">Search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="admin-requests-data-table">
+              <div class="admin-requests-data-col1">
+                <header-cell-wrapper
+                  class="header-cell-wrapper"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell header-cellroot-class-name5"
+                  >
+                    <span class="header-cell-text1 contentLg">
+                      <fragment class="admin-requests-fragment10">
+                        <span class="admin-requests-text11">상태</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper>
+                <data-cell-wrapper class="data-cell-wrapper">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell">
+                    <span class="data-cell-text1 Content">
+                      <fragment class="admin-requests-fragment11">
+                        <span class="admin-requests-text12">의뢰접수</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper>
+                <data-cell-wrapper-gqf4 class="data-cell-wrapper-gqf4">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell1">
+                    <span class="data-cell-text2 Content">
+                      <fragment class="admin-requests-fragment12">
+                        <span class="admin-requests-text13">검사중</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-gqf4>
+                <data-cell-wrapper-hvqd class="data-cell-wrapper-hvqd">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell2">
+                    <span class="data-cell-text3 Content">
+                      <fragment class="admin-requests-fragment13">
+                        <span class="admin-requests-text14">검사중</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-hvqd>
+                <data-cell-wrapper-gzwk class="data-cell-wrapper-gzwk">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell3">
+                    <span class="data-cell-text4 Content">
+                      <fragment class="admin-requests-fragment14">
+                        <span class="admin-requests-text15">의뢰접수</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-gzwk>
+                <data-cell-wrapper-2kxq class="data-cell-wrapper-2kxq">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell4">
+                    <span class="data-cell-text5 Content">
+                      <fragment class="admin-requests-fragment15">
+                        <span class="admin-requests-text16">검사완료</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-2kxq>
+                <data-cell-wrapper-wpqx class="data-cell-wrapper-wpqx">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell5">
+                    <span class="data-cell-text6 Content">
+                      <fragment class="admin-requests-fragment16">
+                        <span class="admin-requests-text17">의뢰접수</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-wpqx>
+              </div>
+              <div class="admin-requests-data-col2">
+                <header-cell-wrapper-qs4u
+                  class="header-cell-wrapper-qs4u"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell1 header-cellroot-class-name4"
+                  >
+                    <span class="header-cell-text2 contentLg">
+                      <fragment class="admin-requests-fragment17">
+                        <span class="admin-requests-text18">종/품종</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper-qs4u>
+                <data-cell-wrapper-p8xl class="data-cell-wrapper-p8xl">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell6">
+                    <span class="data-cell-text7 Content">
+                      <fragment class="admin-requests-fragment18">
+                        <span class="admin-requests-text19">Canine</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-p8xl>
+                <data-cell-wrapper-jd60 class="data-cell-wrapper-jd60">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell7">
+                    <span class="data-cell-text8 Content">
+                      <fragment class="admin-requests-fragment19">
+                        <span class="admin-requests-text20">Feline</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-jd60>
+                <data-cell-wrapper-yziz class="data-cell-wrapper-yziz">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell8">
+                    <span class="data-cell-text9 Content">
+                      <fragment class="admin-requests-fragment20">
+                        <span class="admin-requests-text21">Canine</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-yziz>
+                <data-cell-wrapper-sfis class="data-cell-wrapper-sfis">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell9">
+                    <span class="data-cell-text10 Content">
+                      <fragment class="admin-requests-fragment21">
+                        <span class="admin-requests-text22">Canine</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-sfis>
+                <data-cell-wrapper-sfsb class="data-cell-wrapper-sfsb">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell10">
+                    <span class="data-cell-text11 Content">
+                      <fragment class="admin-requests-fragment22">
+                        <span class="admin-requests-text23">Canine</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-sfsb>
+                <data-cell-wrapper-39gs class="data-cell-wrapper-39gs">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell11">
+                    <span class="data-cell-text12 Content">
+                      <fragment class="admin-requests-fragment23">
+                        <span class="admin-requests-text24">Canine</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-39gs>
+              </div>
+              <div class="admin-requests-data-col3">
+                <header-cell-wrapper-2x9w
+                  class="header-cell-wrapper-2x9w"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell2 header-cellroot-class-name"
+                  >
+                    <span class="header-cell-text3 contentLg">
+                      <fragment class="admin-requests-fragment24">
+                        <span class="admin-requests-text25">검사의뢰일</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper-2x9w>
+                <data-cell-wrapper-kegx class="data-cell-wrapper-kegx">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell12">
+                    <span class="data-cell-text13 Content">
+                      <fragment class="admin-requests-fragment25">
+                        <span class="admin-requests-text26">2025-02-10</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-kegx>
+                <data-cell-wrapper-euiy class="data-cell-wrapper-euiy">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell13">
+                    <span class="data-cell-text14 Content">
+                      <fragment class="admin-requests-fragment26">
+                        <span class="admin-requests-text27">2025-02-10</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-euiy>
+                <data-cell-wrapper-99vx class="data-cell-wrapper-99vx">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell14">
+                    <span class="data-cell-text15 Content">
+                      <fragment class="admin-requests-fragment27">
+                        <span class="admin-requests-text28">2025-02-10</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-99vx>
+                <data-cell-wrapper-rf3s class="data-cell-wrapper-rf3s">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell15">
+                    <span class="data-cell-text16 Content">
+                      <fragment class="admin-requests-fragment28">
+                        <span class="admin-requests-text29">2025-02-10</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-rf3s>
+                <data-cell-wrapper-cldo class="data-cell-wrapper-cldo">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell16">
+                    <span class="data-cell-text17 Content">
+                      <fragment class="admin-requests-fragment29">
+                        <span class="admin-requests-text30">2025-02-10</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-cldo>
+                <data-cell-wrapper-fmji class="data-cell-wrapper-fmji">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell17">
+                    <span class="data-cell-text18 Content">
+                      <fragment class="admin-requests-fragment30">
+                        <span class="admin-requests-text31">2025-02-10</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-fmji>
+              </div>
+              <div class="admin-requests-data-col4">
+                <header-cell-wrapper-ds95
+                  class="header-cell-wrapper-ds95"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell3 header-cellroot-class-name1"
+                  >
+                    <span class="header-cell-text4 contentLg">
+                      <fragment class="admin-requests-fragment31">
+                        <span class="admin-requests-text32">병원명</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper-ds95>
+                <data-cell-wrapper-7htk class="data-cell-wrapper-7htk">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell18">
+                    <span class="data-cell-text19 Content">
+                      <fragment class="admin-requests-fragment32">
+                        <span class="admin-requests-text33">해피동물병원</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-7htk>
+                <data-cell-wrapper-hfg2 class="data-cell-wrapper-hfg2">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell19">
+                    <span class="data-cell-text20 Content">
+                      <fragment class="admin-requests-fragment33">
+                        <span class="admin-requests-text34">해피동물병원</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-hfg2>
+                <data-cell-wrapper-dq3i class="data-cell-wrapper-dq3i">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell20">
+                    <span class="data-cell-text21 Content">
+                      <fragment class="admin-requests-fragment34">
+                        <span class="admin-requests-text35">해피동물병원</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-dq3i>
+                <data-cell-wrapper-kqu7 class="data-cell-wrapper-kqu7">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell21">
+                    <span class="data-cell-text22 Content">
+                      <fragment class="admin-requests-fragment35">
+                        <span class="admin-requests-text36">해피동물병원</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-kqu7>
+                <data-cell-wrapper-3z54 class="data-cell-wrapper-3z54">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell22">
+                    <span class="data-cell-text23 Content">
+                      <fragment class="admin-requests-fragment36">
+                        <span class="admin-requests-text37">해피동물병원</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-3z54>
+                <data-cell-wrapper-ymmk class="data-cell-wrapper-ymmk">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell23">
+                    <span class="data-cell-text24 Content">
+                      <fragment class="admin-requests-fragment37">
+                        <span class="admin-requests-text38">해피동물병원</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-ymmk>
+              </div>
+              <div class="admin-requests-data-col5">
+                <header-cell-wrapper-t57m
+                  class="header-cell-wrapper-t57m"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell4 header-cellroot-class-name2"
+                  >
+                    <span class="header-cell-text5 contentLg">
+                      <fragment class="admin-requests-fragment38">
+                        <span class="admin-requests-text39">수의사명</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper-t57m>
+                <data-cell-wrapper-974l class="data-cell-wrapper-974l">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell24">
+                    <span class="data-cell-text25 Content">
+                      <fragment class="admin-requests-fragment39">
+                        <span class="admin-requests-text40">홍길동</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-974l>
+                <data-cell-wrapper-wxx7 class="data-cell-wrapper-wxx7">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell25">
+                    <span class="data-cell-text26 Content">
+                      <fragment class="admin-requests-fragment40">
+                        <span class="admin-requests-text41">홍길동</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-wxx7>
+                <data-cell-wrapper-mz43 class="data-cell-wrapper-mz43">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell26">
+                    <span class="data-cell-text27 Content">
+                      <fragment class="admin-requests-fragment41">
+                        <span class="admin-requests-text42">홍길동</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-mz43>
+                <data-cell-wrapper-hssz class="data-cell-wrapper-hssz">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell27">
+                    <span class="data-cell-text28 Content">
+                      <fragment class="admin-requests-fragment42">
+                        <span class="admin-requests-text43">홍길동</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-hssz>
+                <data-cell-wrapper-x43j class="data-cell-wrapper-x43j">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell28">
+                    <span class="data-cell-text29 Content">
+                      <fragment class="admin-requests-fragment43">
+                        <span class="admin-requests-text44">홍길동</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-x43j>
+                <data-cell-wrapper-rpz9 class="data-cell-wrapper-rpz9">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell29">
+                    <span class="data-cell-text30 Content">
+                      <fragment class="admin-requests-fragment44">
+                        <span class="admin-requests-text45">홍길동</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-rpz9>
+              </div>
+              <div class="admin-requests-data-col6">
+                <header-cell-wrapper-ho5w
+                  class="header-cell-wrapper-ho5w"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell5 header-cellroot-class-name3"
+                  >
+                    <span class="header-cell-text6 contentLg">
+                      <fragment class="admin-requests-fragment45">
+                        <span class="admin-requests-text46">검사 항목 수</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper-ho5w>
+                <data-cell-wrapper-cu50 class="data-cell-wrapper-cu50">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell30">
+                    <span class="data-cell-text31 Content">
+                      <fragment class="admin-requests-fragment46">
+                        <span class="admin-requests-text47">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-cu50>
+                <data-cell-wrapper-8432 class="data-cell-wrapper-8432">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell31">
+                    <span class="data-cell-text32 Content">
+                      <fragment class="admin-requests-fragment47">
+                        <span class="admin-requests-text48">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-8432>
+                <data-cell-wrapper-jo6k class="data-cell-wrapper-jo6k">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell32">
+                    <span class="data-cell-text33 Content">
+                      <fragment class="admin-requests-fragment48">
+                        <span class="admin-requests-text49">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-jo6k>
+                <data-cell-wrapper-bmm4 class="data-cell-wrapper-bmm4">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell33">
+                    <span class="data-cell-text34 Content">
+                      <fragment class="admin-requests-fragment49">
+                        <span class="admin-requests-text50">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-bmm4>
+                <data-cell-wrapper-2pxy class="data-cell-wrapper-2pxy">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell34">
+                    <span class="data-cell-text35 Content">
+                      <fragment class="admin-requests-fragment50">
+                        <span class="admin-requests-text51">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-2pxy>
+                <data-cell-wrapper-xflp class="data-cell-wrapper-xflp">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell35">
+                    <span class="data-cell-text36 Content">
+                      <fragment class="admin-requests-fragment51">
+                        <span class="admin-requests-text52">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-xflp>
+              </div>
+              <div class="admin-requests-data-col7">
+                <header-cell-wrapper-r3gc
+                  class="header-cell-wrapper-r3gc"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell6 header-cellroot-class-name7"
+                  >
+                    <span class="header-cell-text7 contentLg">
+                      <fragment class="admin-requests-fragment52">
+                        <span class="admin-requests-text53">검사 항목 수</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper-r3gc>
+                <data-cell-wrapper-kusv class="data-cell-wrapper-kusv">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell36">
+                    <span class="data-cell-text37 Content">
+                      <fragment class="admin-requests-fragment53">
+                        <span class="admin-requests-text54">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-kusv>
+                <data-cell-wrapper-svcw class="data-cell-wrapper-svcw">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell37">
+                    <span class="data-cell-text38 Content">
+                      <fragment class="admin-requests-fragment54">
+                        <span class="admin-requests-text55">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-svcw>
+                <data-cell-wrapper-4khg class="data-cell-wrapper-4khg">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell38">
+                    <span class="data-cell-text39 Content">
+                      <fragment class="admin-requests-fragment55">
+                        <span class="admin-requests-text56">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-4khg>
+                <data-cell-wrapper-39eo class="data-cell-wrapper-39eo">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell39">
+                    <span class="data-cell-text40 Content">
+                      <fragment class="admin-requests-fragment56">
+                        <span class="admin-requests-text57">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-39eo>
+                <data-cell-wrapper-ebbn class="data-cell-wrapper-ebbn">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell40">
+                    <span class="data-cell-text41 Content">
+                      <fragment class="admin-requests-fragment57">
+                        <span class="admin-requests-text58">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-ebbn>
+                <data-cell-wrapper-mokp class="data-cell-wrapper-mokp">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell41">
+                    <span class="data-cell-text42 Content">
+                      <fragment class="admin-requests-fragment58">
+                        <span class="admin-requests-text59">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-mokp>
+              </div>
+              <div class="admin-requests-data-col8">
+                <header-cell-wrapper-ador
+                  class="header-cell-wrapper-ador"
+                  rootclassname="header-cellundefined"
+                >
+                  <!--HeaderCell component-->
+                  <div
+                    class="header-cell-header-cell7 header-cellroot-class-name6"
+                  >
+                    <span class="header-cell-text8 contentLg">
+                      <fragment class="admin-requests-fragment59">
+                        <span class="admin-requests-text60">검사 항목 수</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </header-cell-wrapper-ador>
+                <data-cell-wrapper-9qkr class="data-cell-wrapper-9qkr">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell42">
+                    <span class="data-cell-text43 Content">
+                      <fragment class="admin-requests-fragment60">
+                        <span class="admin-requests-text61">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-9qkr>
+                <data-cell-wrapper-275u class="data-cell-wrapper-275u">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell43">
+                    <span class="data-cell-text44 Content">
+                      <fragment class="admin-requests-fragment61">
+                        <span class="admin-requests-text62">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-275u>
+                <data-cell-wrapper-rsc5 class="data-cell-wrapper-rsc5">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell44">
+                    <span class="data-cell-text45 Content">
+                      <fragment class="admin-requests-fragment62">
+                        <span class="admin-requests-text63">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-rsc5>
+                <data-cell-wrapper-2a6z class="data-cell-wrapper-2a6z">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell45">
+                    <span class="data-cell-text46 Content">
+                      <fragment class="admin-requests-fragment63">
+                        <span class="admin-requests-text64">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-2a6z>
+                <data-cell-wrapper-83op class="data-cell-wrapper-83op">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell46">
+                    <span class="data-cell-text47 Content">
+                      <fragment class="admin-requests-fragment64">
+                        <span class="admin-requests-text65">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-83op>
+                <data-cell-wrapper-e2hc class="data-cell-wrapper-e2hc">
+                  <!--DataCell component-->
+                  <div class="data-cell-data-cell47">
+                    <span class="data-cell-text48 Content">
+                      <fragment class="admin-requests-fragment65">
+                        <span class="admin-requests-text66">29개</span>
+                      </fragment>
+                    </span>
+                  </div>
+                </data-cell-wrapper-e2hc>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>

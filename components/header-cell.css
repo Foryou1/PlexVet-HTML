@@ -1,0 +1,85 @@
+.header-cell-header-cell {
+  flex: 0 0 auto;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  position: relative;
+  align-items: center;
+  border-color: var(--dl-color-gray-black);
+  border-style: solid;
+  border-width: 1px;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  grid-column-start: 1;
+  border-right-width: 0px;
+  border-bottom-width: 0.15rem;
+}
+ 
+.header-cell-text1 {
+  text-align: center;
+  word-break: keep-all;
+  white-space: nowrap;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-column-end: 3;
+  grid-column-start: 2;
+}
+ 
+.header-cell-fragment {
+  display: contents;
+}
+ 
+.header-cell-text2 {
+  display: inline-block;
+}
+ 
+.header-cellroot-class-name {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+ 
+.header-cellroot-class-name1 {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+ 
+.header-cellroot-class-name2 {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+ 
+.header-cellroot-class-name3 {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+ 
+.header-cellroot-class-name4 {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+ 
+.header-cellroot-class-name5 {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+ 
+.header-cellroot-class-name6 {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}
+ 
+.header-cellroot-class-name7 {
+  position: relative;
+  grid-row-end: 1;
+  grid-column-end: 1;
+}

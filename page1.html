@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Page1 - PlexVET</title>
+    <meta name="description" content="Description of the website" />
+    <meta property="og:title" content="Page1 - PlexVET" />
+    <meta property="og:description" content="Description of the website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: "Noto Sans";
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.4;
+        color: var(--dl-color-gray-black);
+        background: var(--dl-color-gray-white);
+
+        fill: var(--dl-color-gray-black);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;600;700;800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+    <style>
+      :root {
+        --main-color: #B959A1;
+      }
+
+      input[type="checkbox"] {
+        accent-color: var(--main-color);
+      }
+
+      input[type="radio"] {
+        accent-color: var(--main-color);
+      }
+
+      input::placeholder {
+        text-align: left;
+      }
+
+      /* 브라우저 호환성을 위해 아래와 같이 벤더 프리픽스도 추가할 수 있습니다. */
+      input::-webkit-input-placeholder {
+        /* Chrome, Safari, Opera */
+        text-align: left;
+      }
+
+      input::-moz-placeholder {
+        /* Firefox 19+ */
+        text-align: left;
+      }
+
+      input:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        text-align: left;
+      }
+
+      input:-moz-placeholder {
+        /* Firefox 18- */
+        text-align: left;
+      }
+    </style>
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./page1.css" rel="stylesheet" />
+
+      <div class="page1-container1">
+        <div class="page1-header"></div>
+        <div class="page1-header30 thq-section-padding">
+          <img
+            alt="image"
+            src="https://images.unsplash.com/photo-1597633425046-08f5110420b5?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE3fHxkb2d8ZW58MHx8fHwxNzQxMTA5MzE2fDA&amp;ixlib=rb-4.0.3&amp;w=1500"
+            class="page1-image1"
+          />
+          <div class="page1-container2"></div>
+          <div class="page1-max-width1 thq-section-max-width">
+            <div class="page1-content1">
+              <img
+                alt="image"
+                src="public/img/logo-200h.png"
+                class="page1-image2"
+              />
+              <h1 class="page1-text10 thq-heading-1">
+                <span class="page1-text11">PlexVET 개인정보 처리방침</span>
+                <br class="page1-text12" />
+              </h1>
+              <p class="page1-text13 thq-body-large">
+                '(주)리얼티바이오'의 PlexVET 서비스 운영에 대한
+                개인정보처리방침을 통하여 이용자가 제공하는 개인정보가 어떠한
+                용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한
+                조치가 취해지고 있는지 알려드립니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="page1-container3 thq-section-padding">
+          <div class="page1-max-width2 thq-section-max-width thq-flex-column">
+            <div class="page1-content2 thq-flex-column">
+              <ul class="page1-ul1 thq-flex-column">
+                <li class="page1-li1 thq-flex-column list-item">
+                  <h2 class="page1-heading7 thq-heading-2">개인정보처리방침</h2>
+                  <p class="page1-content7 thq-body-small">
+                    <span>
+                      (주)넥슨코리아(이하 '넥슨')는 이용자의 자유와 권리 보호를
+                      위해 「개인정보 보호법」 및 관계 법령이 정한 바를
+                      준수하며, 적법하게 개인정보를 처리하고 안전하게 관리하고
+                      있습니다.
+                    </span>
+                    <br />
+                    <span>
+                      이에 「개인정보 보호법」 제30조에 따라 이용자에게 개인정보
+                      처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을
+                      신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이
+                      개인정보처리방침을 수립·공개합니다.
+                    </span>
+                    <br />
+                    <span>
+                      본 개인정보처리방침은 넥슨이 제공하는 게임 및 제반
+                      서비스에 적용됩니다.
+                    </span>
+                  </p>
+                  <ul class="page1-ul2 thq-flex-column">
+                    <li class="list-item">
+                      <h3 class="page1-heading8 thq-heading-3">목차</h3>
+                      <p class="thq-body-small">
+                        <span>1. 수집하는 개인정보의 항목</span>
+                        <br />
+                        <span>2. 개인정보의 처리 목적</span>
+                        <br />
+                        <span>
+                          3. 14세 미만 아동의 개인정보 처리에 관한 사항
+                        </span>
+                        <br />
+                        <span>4. 개인정보의 제3자 제공</span>
+                        <br />
+                        <span>5. 개인정보의 처리 위탁</span>
+                        <br />
+                        <span>6. 개인정보의 국외이전</span>
+                        <br />
+                        <span>
+                          7. 개인정보의 추가적인 이용 또는 제공의 기준
+                        </span>
+                        <br />
+                        <span>8. 개인정보의 보유기간 및 파기</span>
+                        <br />
+                        <span>9. 가명정보의 처리</span>
+                        <br />
+                        <span>
+                          10. 이용자 및 법정대리인의 권리와 그 행사 방법
+                        </span>
+                        <br />
+                        <span>
+                          11. 개인정보 자동수집 장치의 설치·운영 및 그 거부에
+                          관한 사항
+                        </span>
+                        <br />
+                        <span>12. 개인정보보호를 위한 넥슨의 노력</span>
+                        <br />
+                        <span>13. 개인정보보호책임자 및 고충처리 부서</span>
+                        <br />
+                        <span>14. 기타</span>
+                      </p>
+                    </li>
+                    <li class="list-item">
+                      <h3 class="page1-heading9 thq-heading-3">
+                        1. 수집하는 개인정보의 항목
+                      </h3>
+                      <p class="thq-body-small">
+                        <span>■ 필수정보란?</span>
+                        <br />
+                        <span>
+                          기본적인 서비스를 제공하기 위해 수집하는 개인정보
+                        </span>
+                        <br />
+                        <span></span>
+                        <br />
+                        <span>■ 선택정보란?</span>
+                        <br />
+                        <span>
+                          기본적인 서비스 이외에 부가적인 서비스를 제공하기 위해
+                          수집하는 개인정보
+                        </span>
+                        <br />
+                        <br />
+                        <span>
+                          넥슨은 아래의 개인정보 항목을 이용자의 동의를 받아
+                          처리하고 있습니다.
+                        </span>
+                        <br />
+                        <span>
+                          - 회원가입: [필수] ID, 닉네임, 비밀번호,
+                          본인확인정보(이름, 생년월일, 성별, 내외국인정보,
+                          휴대전화번호, 연계정보(CI), 중복가입정보(DI),
+                          이동통신사 정보)
+                        </span>
+                        <br />
+                        <span>
+                          - 보호자동의: [필수] 본인확인정보(이름, 생년월일,
+                          성별, 내외국인정보, 휴대전화번호, 중복가입정보(DI),
+                          이동통신사 정보), 이메일주소
+                        </span>
+                        <br />
+                        <span>
+                          - 게임 및 제반 서비스: [필수] 넥슨퍼스트 - 성별, 생년,
+                          지역, 직업
+                        </span>
+                        <br />
+                        <span>
+                          - 결제: [필수] 휴대전화번호,
+                          컬쳐랜드/해피머니/북앤라이프 회원ID
+                        </span>
+                        <br />
+                        <span>
+                          - 환불 처리: [필수] 계좌정보(은행명, 예금주명,
+                          계좌번호), 결제 정보
+                        </span>
+                        <br />
+                        <span>
+                          - 이벤트 등 프로모션 알림 전송: [선택] 휴대전화번호,
+                          이메일주소
+                        </span>
+                        <br />
+                        <span>
+                          - 경품 및 상품배송: [필수] 이름, 휴대전화번호,
+                          전화번호, 주소
+                        </span>
+                        <br />
+                        <span>
+                          - 상금지급 및 포인트 전환: [필수] 계좌정보(은행명,
+                          예금주명, 계좌번호), 사업자 - 통장사본, 인감증명서
+                        </span>
+                        <br />
+                        <span>
+                          - 공지사항 전달: [필수] 휴대전화번호, 전화번호,
+                          이메일주소
+                        </span>
+                        <br />
+                        <span>
+                          - 이벤트 및 행사 참여: [선택] 이름, 휴대전화번호,
+                          성별, 생년월일, 이메일주소
+                        </span>
+                        <br />
+                        <span>
+                          - 문의대응: [필수] 닉네임, 이메일주소(비회원 문의 시)
+                          [선택] ID, 이름, 이메일주소, 휴대전화번호, 마이핀번호,
+                          생년월일, 성별, 주소, 전화번호, 본인확인정보, 결제
+                          정보
+                        </span>
+                        <br />
+                        <span>
+                          (문의 유형에 따라 추가로 개인정보 또는 이용자 이미지를
+                          수집할 수 있습니다.)
+                        </span>
+                        <br />
+                        <br />
+                        <span>
+                          넥슨은 아래의 개인정보 항목을 이용자의 동의없이
+                          처리하고 있습니다.
+                        </span>
+                        <br />
+                        <span>
+                          - 제세공과금 처리: [필수] 주민등록번호, 주소, 이름,
+                          휴대전화번호
+                        </span>
+                        <br />
+                        <span>
+                          법적 근거: 소득세법 제21조, 제127조, 제164조
+                        </span>
+                        <br />
+                        <br />
+                        <span>
+                          서비스 안정성 확보, 부정이용자 방지, 계정 및 아이템
+                          보호, 법률 및 넥슨 이용약관 위반 행위 제한 등의
+                          목적으로 서비스를 이용하는 과정에서 자동으로 생성되는
+                          정보(IP, 접속기록, 서비스 이용기록, 불량이용 기록,
+                          다운로드 기록, 결제 기록, 쿠키)와 기기를 식별할 수
+                          있는 정보(OS 정보, 하드웨어 정보, Mac Address, UUID,
+                          광고식별자)가 수집될 수 있습니다.
+                        </span>
+                        <br />
+                        <span></span>
+                        <br />
+                        <span>
+                          소셜로그인과 같이 다른 회사의 계정(네이버, 애플, 구글,
+                          페이스북, 스팀, 소니, 마이크로소프트 등)으로 넥슨의
+                          서비스를 이용하는 경우 해당 회사로부터 이용자 식별을
+                          위한 데이터와 이용자에게 동의 받은 개인정보만을
+                          제공받고 동의한 목적 범위 내에서만 처리합니다.
+                        </span>
+                        <br />
+                        <span></span>
+                        <br />
+                        <span>
+                          YouTube API를 이용하여 채널, 영상 정보 등을 수집할 수
+                          있으며 YouTube API Services
+                          이용약관(https://developers.google.com/youtube/terms/api-services-terms-of-service)과
+                          Google
+                          개인정보처리방침(http://www.google.com/policies/privacy)을
+                          준수합니다. 해당 API 접근은 Google 보안 설정
+                          페이지(https://security.google.com/settings/security/permissions)를
+                          통해 철회할 수 있습니다.
+                        </span>
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="page1-content3 thq-flex-column">
+              <ul class="page1-ul3 thq-flex-column"></ul>
+            </div>
+            <div class="page1-content4 thq-flex-column">
+              <ul class="page1-ul4 thq-flex-column"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>
